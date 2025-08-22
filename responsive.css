@@ -1,0 +1,29 @@
+/* Responsive overrides and breakpoints */
+
+/* Small paddings on mobile */
+@media (max-width: 560px) {
+  .container { padding: 16px; }
+  .card { padding: 16px; }
+}
+
+/* Grid adjustments */
+@media (min-width: 560px) {
+  .choice-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 560px) {
+  .pref-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Chat app mobile layout */
+@media (max-width: 900px) {
+  .chat-app { grid-template-columns: 1fr; }
+  .sidebar { position: absolute; inset: 0; z-index: 20; display: none; width: 100%; max-width: 100%; }
+  .chat-app.show-sidebar .sidebar { display: grid; }
+  .sidebar .s-header .close-sidebar { display: inline-flex; }
+  .mobile-only { display: inline-flex; }
+}
+
+/* Backdrop for mobile sidebar */
+.backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.45); display: none; z-index: 15; }
+.chat-app.show-sidebar .backdrop { display: block; }
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Menu - Universal</title>
+    <link rel="stylesheet" href="assets/shared.css" />
+    <link rel="stylesheet" href="assets/responsive.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="brand"><div class="logo"></div><h2>Universal</h2></div>
+        <p class="hint">Choose a feature</p>
+        <div class="grid">
+          <div class="tile">
+            <div>
+              <div class="label">Chat</div>
+              <div class="badge">Functional</div>
+            </div>
+            <a class="btn" href="chat.html">Open</a>
+          </div>
+          <div class="tile">
+            <div>
+              <div class="label">Social Media</div>
+              <div class="badge">Coming soon</div>
+            </div>
+            <button disabled>Open</button>
+          </div>
+          <div class="tile">
+            <div>
+              <div class="label">Payments</div>
+              <div class="badge">Coming soon</div>
+            </div>
+            <button disabled>Open</button>
+          </div>
+          <div class="tile">
+            <div>
+              <div class="label">Map</div>
+              <div class="badge">Coming soon</div>
+            </div>
+            <button disabled>Open</button>
+          </div>
+          <div class="tile">
+            <div>
+              <div class="label">Bookings</div>
+              <div class="badge">Coming soon</div>
+            </div>
+            <button disabled>Open</button>
+          </div>
+        </div>
+        <div class="actions" style="margin-top:16px">
+          <button class="btn ghost" id="logout-btn">Log out</button>
+        </div>
+      </div>
+    </div>
+    <script src="assets/utils.js"></script>
+    <script>
+      if (!Auth.isLoggedIn()) { window.location.replace('choice.html'); }
+      document.getElementById('logout-btn').addEventListener('click', () => { Auth.logout(); window.location.replace('choice.html'); });
+    </script>
+  </body>
+  </html>

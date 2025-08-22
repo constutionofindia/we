@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Universal</title>
+    <link rel="stylesheet" href="assets/shared.css" />
+    <link rel="stylesheet" href="assets/responsive.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h2>Create your account</h2>
+        <p class="hint">Step <span id="signup-step-indicator">1</span> of 2</p>
+
+        <form id="signup-form" autocomplete="off">
+          <div id="signup-step-1">
+            <div class="row two">
+              <div class="field">
+                <label for="su-name">Name</label>
+                <input id="su-name" type="text" placeholder="Jane Doe" required />
+              </div>
+              <div class="field">
+                <label for="su-username">Username</label>
+                <input id="su-username" type="text" placeholder="jane" minlength="3" required />
+              </div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="su-email">Email</label>
+                <input id="su-email" type="email" placeholder="jane@example.com" required />
+              </div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="su-password">Password</label>
+                <input id="su-password" type="password" placeholder="••••••••" minlength="6" required />
+              </div>
+            </div>
+            <div class="actions">
+              <button type="button" id="btn-su-next">Next</button>
+              <a class="btn ghost" href="choice.html">Cancel</a>
+            </div>
+            <div id="su-step1-error" class="error" role="alert" aria-live="polite"></div>
+          </div>
+
+          <div id="signup-step-2" class="hidden">
+            <div class="row two">
+              <div class="field">
+                <label for="su-dob">Date of Birth</label>
+                <input id="su-dob" type="date" required />
+              </div>
+              <div class="field">
+                <label for="su-gender">Gender</label>
+                <select id="su-gender" required>
+                  <option value="">Select…</option>
+                  <option>Female</option>
+                  <option>Male</option>
+                  <option>Non-binary</option>
+                  <option>Prefer not to say</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label>Preferences (optional)</label>
+                <div class="pref-grid" id="prefs-group">
+                  <div class="pref-card" data-value="Tech">Tech</div>
+                  <div class="pref-card" data-value="Sports">Sports</div>
+                  <div class="pref-card" data-value="Music">Music</div>
+                  <div class="pref-card" data-value="Movies">Movies</div>
+                  <div class="pref-card" data-value="Travel">Travel</div>
+                  <div class="pref-card" data-value="Food">Food</div>
+                </div>
+              </div>
+            </div>
+            <div class="actions">
+              <button type="button" class="ghost" id="btn-su-back">Back</button>
+              <button type="submit" id="btn-su-submit">Create Account</button>
+            </div>
+            <div id="su-step2-error" class="error" role="alert" aria-live="polite"></div>
+          </div>
+        </form>
+
+        <div class="actions" style="justify-content:center; margin-top:12px;">
+          <a class="btn ghost" href="choice.html">Back</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/utils.js"></script>
+    <script src="assets/signup.js"></script>
+  </body>
+  </html>

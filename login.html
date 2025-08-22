@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Universal</title>
+    <link rel="stylesheet" href="assets/shared.css" />
+    <link rel="stylesheet" href="assets/responsive.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h2>Login</h2>
+        <p class="hint">Use your email or username</p>
+        <form id="login-form" autocomplete="off">
+          <div class="field">
+            <label for="li-id">Email or Username</label>
+            <input id="li-id" type="text" placeholder="jane or jane@example.com" required />
+          </div>
+          <div class="field">
+            <label for="li-password">Password</label>
+            <input id="li-password" type="password" placeholder="••••••••" required />
+          </div>
+          <div class="actions">
+            <button type="submit">Login</button>
+            <a class="btn ghost" href="choice.html">Back</a>
+          </div>
+          <div id="li-error" class="error" role="alert" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+
+    <script src="assets/utils.js"></script>
+    <script src="assets/login.js"></script>
+  </body>
+  </html>
